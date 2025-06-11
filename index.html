@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ülesannete Nimekiri</title>
-    <link rel="stylesheet" href="stiil.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <div class="konteiner">
-        <h1>Minu Ülesanded</h1>
-        <div class="sisendi-ala">
-            <input type="text" id="ulesandeSisend" placeholder="Sisesta uus ülesanne...">
-            <button onclick="lisaUusUlesanne()">Lisa</button>
-        </div>
-        <ul id="ulesanneteNimekiri">
-            <!-- Siia lisatakse ülesanded JavaScriptiga -->
-        </ul>
+<div class="konteiner">
+    <h1>Minu Ülesanded</h1>
+    <div class="sisendi-ala">
+        <input type="text" id="ulesandeSisend" placeholder="Sisesta uus ülesanne..." />
+        <button onclick="lisaUusUlesanne()">Lisa</button>
     </div>
-
-    <script src="skript.js"></script>
+    <p id="viga" class="veateade"></p>
+    <ul id="ulesanneteNimekiri"></ul>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
