@@ -5,8 +5,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .konteiner {
@@ -14,17 +16,21 @@ body {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
 h1 {
     color: #1c1e21;
+    margin-bottom: 20px;
 }
 
 .sisendi-ala {
     display: flex;
-    margin-bottom: 20px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    gap: 10px;
 }
 
 #ulesandeSisend {
@@ -32,6 +38,7 @@ h1 {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 button {
@@ -40,27 +47,59 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    margin-left: 10px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+.veateade {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    height: 1.2em;
+}
+
 #ulesanneteNimekiri {
     list-style-type: none;
     padding: 0;
     text-align: left;
+    margin-top: 10px;
 }
 
 #ulesanneteNimekiri li {
     background-color: #f9f9f9;
-    padding: 10px;
+    padding: 10px 15px;
     border-bottom: 1px solid #eee;
+    position: relative;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
 }
 
-#ulesanneteNimekiri li:last-child {
-    border-bottom: none;
+#ulesanneteNimekiri li.tehtud {
+    text-decoration: line-through;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.kustuta {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+    .sisendi-ala {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
